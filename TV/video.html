@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="css/base.css" />
+<script type="text/javascript" src="js/jquery.min.js" ></script>
+<script type="text/javascript" src="js/common.js" ></script>
+</head>
+<body>
+<div class="container">
+	<div class="left">
+		<img src="images/5-37.png" class="logo" />
+		<h1>天地家政</h1>
+		<p>市光路店<br />上海市杨浦区市光路248号<br />021-12548657 </p>
+		<img src="images/code.png" class="code" />
+	</div>
+	<div class="right">
+		<ul class="list">
+			<li class="current"><a href="###"><span>紧急业务</span></a></li>
+			<li><a href="###"><span>服务项目</span></a></li>
+			<li><a href="###"><span>礼仪视频</span></a></li>
+		</ul>
+		<div class="header">
+			<div class="item video"><span>视频礼仪</span></div>
+			<div class="menu"><span>菜单</span></div>
+		</div>
+		<div id="videobox">	
+		<div class="videos clearfix">
+			<div class="vs">
+				<div><video src="saiban_ch.mp4" poster="images/0.png"  id="video0"></video></div>
+				<p>礼仪礼节篇</p>
+			</div>
+			<div class="vs">
+				<div><video src="saiban_ch.mp4" poster="images/0.png" id="video1"></video></div>
+				<p>礼仪礼节篇</p>
+			</div>
+			<div class="vs">
+				<div><video src="saiban_ch.mp4" poster="images/0.png" id="video2"></video></div>
+				<p>礼仪礼节篇</p>
+			</div>
+			<div class="vs">
+				<div><video src="saiban_ch.mp4" poster="images/0.png" id="video3"></video></div>
+				<p>礼仪礼节篇</p>
+			</div>
+		</div>
+		<div class="videos videos2 clearfix">
+			<div class="vs">
+				<div><video src="saiban_ch.mp4" poster="images/0.png" id="video4"></video></div>
+				<p>礼仪礼节篇</p>
+			</div>
+			<div class="vs">
+				<div><video src="saiban_ch.mp4" poster="images/0.png" id="video5"></video></div>
+				<p>礼仪礼节篇</p>
+			</div>
+			<div class="vs">
+				<div><video src="saiban_ch.mp4" poster="images/0.png" id="video6"></video></div>
+				<p>礼仪礼节篇</p>
+			</div>
+			<div class="vs">
+				<div><video src="saiban_ch.mp4" poster="images/0.png" id="video7"></video></div>
+				<p>礼仪礼节篇</p>
+			</div>
+		</div>
+		</div>
+		<div class="btns clearfix">
+			<a href="###">上一页</a><a href="###">下一页</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js" ></script>
+<script type="text/javascript">
+//反射調用
+var invokeFieldOrMethod = function(element, method) 
+{
+var usablePrefixMethod;
+["webkit", "moz", "ms", "o", ""].forEach(function(prefix) {
+if (usablePrefixMethod) return;
+if (prefix === "") {
+// 无前缀，方法首字母小写
+method = method.slice(0,1).toLowerCase() + method.slice(1); 
+}
+var typePrefixMethod = typeof element[prefix + method];
+if (typePrefixMethod + "" !== "undefined") {
+if (typePrefixMethod === "function") {
+usablePrefixMethod = element[prefix + method]();
+} else {
+usablePrefixMethod = element[prefix + method];
+}
+}
+});
+return usablePrefixMethod;
+};
+//進入全屏
+function launchFullscreen(element) 
+{
+if(element.requestFullscreen) {
+element.requestFullscreen();
+} else if(element.mozRequestFullScreen) {
+element.mozRequestFullScreen();
+} else if(element.msRequestFullscreen){ 
+element.msRequestFullscreen(); 
+} else if(element.oRequestFullscreen){
+element.oRequestFullscreen();
+}
+else if(element.webkitRequestFullscreen)
+{
+element.webkitRequestFullScreen();
+}else{
+var docHtml = document.documentElement;
+var docBody = document.body;
+var videobox = document.getElementById('videobox');
+var cssText = 'width:100%;height:100%;overflow:hidden;';
+docHtml.style.cssText = cssText;
+docBody.style.cssText = cssText;
+videobox.style.cssText = cssText+';'+'margin:0px;padding:0px;';
+document.IsFullScreen = true;
+}
+element.play();
+}
+//退出全屏
+function exitFullscreen(element)
+{
+if (document.exitFullscreen) {
+document.exitFullscreen();
+} else if (document.msExitFullscreen) {
+document.msExitFullscreen();
+} else if (document.mozCancelFullScreen) {
+document.mozCancelFullScreen();
+} else if(document.oRequestFullscreen){
+document.oCancelFullScreen();
+}else if (document.webkitExitFullscreen){
+document.webkitExitFullscreen();
+}else{
+var docHtml = document.documentElement;
+var docBody = document.body;
+var videobox = document.getElementById('videobox');
+docHtml.style.cssText = "";
+docBody.style.cssText = "";
+videobox.style.cssText = "";
+document.IsFullScreen = false;
+}
+}
+$(".videos .vs").click(function(){
+	var i= $(this).index();
+	console.log(i);
+	launchFullscreen(document.getElementById("video"+i)); 
+	window.setTimeout(function exit(){
+	//檢查瀏覽器是否處於全屏
+	if(invokeFieldOrMethod(document,'FullScreen') || invokeFieldOrMethod(document,'IsFullScreen') || document.IsFullScreen)
+	{		
+	exitFullscreen();	
+	}
+	},500*1000);
+})
+$(window).keydown( function(event){
+	 var key_code = event.keyCode;
+	if(key_code == 27){
+		$("video").pause();
+	}  
+});
+</script>
+</body>
+
+</html>
