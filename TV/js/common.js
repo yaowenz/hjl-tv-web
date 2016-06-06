@@ -1,17 +1,9 @@
 $(function(){
-	$(".icons>div").height( $(".icons").width()-10 );
-	
-	$(".menu").click(function(){$(".list").animate({"right":"0px"},300)});
-	
-	$(".list li").click(function(){$(this).siblings().removeClass("current");$(this).addClass("current");})
-	
-	
-//	alert( $("body").height ()+"："+$("body").width ());
-	
+	$(".icons>div").height( $(".icons").width()-10 );	
+	$(".menu").click(function(){$(".list").animate({"right":"0px"},300)});	
+	$(".list li").click(function(){$(this).siblings().removeClass("current");$(this).addClass("current");})	
 	var step = 0;
-	var items = $(".txt .box").length;
-	//alert(items)
-	
+	var items = $(".txt .box").length;	
 	$(".js-next").click(function(){
 		step++;
 		if(step>=items){
@@ -63,15 +55,6 @@ function start(){
 	$(".box").eq(step).addClass("current");
 	step++;
 }*/
-
-
-
-
-
-
-
-
-
 
 
 

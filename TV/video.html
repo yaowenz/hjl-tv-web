@@ -29,37 +29,37 @@
 		<div id="videobox">	
 		<div class="videos clearfix">
 			<div class="vs">
-				<div><video src="saiban_ch.mp4" poster="images/0.png"  id="video0"></video></div>
+				<div><div class="border"><video src="saiban_ch.mp4" poster="images/0.png"  id="video0"></video></div></div>
 				<p>礼仪礼节篇</p>
 			</div>
 			<div class="vs">
-				<div><video src="saiban_ch.mp4" poster="images/0.png" id="video1"></video></div>
+				<div><div class="border"><video src="saiban_ch.mp4" poster="images/0.png" id="video1"></video></div></div>
 				<p>礼仪礼节篇</p>
 			</div>
 			<div class="vs">
-				<div><video src="saiban_ch.mp4" poster="images/0.png" id="video2"></video></div>
+				<div><div class="border"><video src="saiban_ch.mp4" poster="images/0.png" id="video2"></video></div></div>
 				<p>礼仪礼节篇</p>
 			</div>
 			<div class="vs">
-				<div><video src="saiban_ch.mp4" poster="images/0.png" id="video3"></video></div>
+				<div><div class="border"><video src="saiban_ch.mp4" poster="images/0.png" id="video3"></video></div></div>
 				<p>礼仪礼节篇</p>
 			</div>
 		</div>
 		<div class="videos videos2 clearfix">
 			<div class="vs">
-				<div><video src="saiban_ch.mp4" poster="images/0.png" id="video4"></video></div>
+				<div><div class="border"><video src="saiban_ch.mp4" poster="images/0.png" id="video4"></video></div></div>
 				<p>礼仪礼节篇</p>
 			</div>
 			<div class="vs">
-				<div><video src="saiban_ch.mp4" poster="images/0.png" id="video5"></video></div>
+				<div><div class="border"><video src="saiban_ch.mp4" poster="images/0.png" id="video5"></video></div></div>
 				<p>礼仪礼节篇</p>
 			</div>
 			<div class="vs">
-				<div><video src="saiban_ch.mp4" poster="images/0.png" id="video6"></video></div>
+				<div><div class="border"><video src="saiban_ch.mp4" poster="images/0.png" id="video6"></video></div></div>
 				<p>礼仪礼节篇</p>
 			</div>
 			<div class="vs">
-				<div><video src="saiban_ch.mp4" poster="images/0.png" id="video7"></video></div>
+				<div><div class="border"><video src="saiban_ch.mp4" poster="images/0.png" id="video7"></video></div></div>
 				<p>礼仪礼节篇</p>
 			</div>
 		</div>
@@ -71,6 +71,12 @@
 </div>
 <script type="text/javascript" src="js/jquery.min.js" ></script>
 <script type="text/javascript">
+$(window).keydown( function(event){
+	 var key_code = event.keyCode;
+	if(key_code == 27){
+		$("video").pause();
+	}  
+});
 //反射調用
 var invokeFieldOrMethod = function(element, method) 
 {
@@ -154,12 +160,7 @@ $(".videos .vs").click(function(){
 	}
 	},500*1000);
 })
-$(window).keydown( function(event){
-	 var key_code = event.keyCode;
-	if(key_code == 27){
-		$("video").pause();
-	}  
-});
+
 </script>
 </body>
 
