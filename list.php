@@ -144,9 +144,9 @@
                 demo.scrollLeft++;
             }
         }
-        var myvar = setInterval(Marquee, 10);
+        var myvar = setInterval(Marquee, 20);
         demo.onmouseout = function () {
-            myvar = setInterval(Marquee, 10);
+            myvar = setInterval(Marquee, 20);
         }
         demo.onmouseover = function () {
             clearInterval(myvar);

@@ -1,5 +1,5 @@
 * { padding: 0; margin: 0; }
-html {min-height:100%}
+html {min-height:100%;font-family: sans-serif, '微软雅黑', 'Heiti'}
 body {color: #fff;width: 100%;background: url(../images/5-21.jpg) no-repeat;background-size:cover;background-attachment: fixed;min-height:100%;}
 ol, ul { list-style: none; }
 b, i, cite { font-weight: normal; font-style: normal; }
