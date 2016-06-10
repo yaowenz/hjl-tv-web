@@ -9,21 +9,11 @@
 </head>
 <body>
 <div class="container">
-	<div class="left">
-		<img src="images/5-37.png" class="logo" />
-		<h1>天地家政</h1>
-		<p>市光路店<br />上海市杨浦区市光路248号<br />021-12548657 </p>
-		<img src="images/code.png" class="code" />
-	</div>
+	<?php include 'side-left.php' ?>
 	<div class="right">
-		<ul class="list">
-			<li class="current"><a href="list.html"><span>紧急业务</span></a></li>
-			<li><a href="index.html"><span>服务项目</span></a></li>
-			<li><a href="video.html"><span>礼仪视频</span></a></li>
-			<li><button class="close">关闭菜单按钮</button></li>
-		</ul>
+		<?php include 'side-right.php' ?>
 		<div class="header">
-			<a href="###" class="item video-icon"><span>视频礼仪</span></a>			
+			<a href="###" class="item video-icon"><span>视频礼仪</span></a>
 			<a href="###" class="menu"><span>菜单</span></a>
 			<a href="###" class="back"><span>返回</span></a>
 		</div>

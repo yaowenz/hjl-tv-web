@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>紧急业务</title>
 <link rel="stylesheet" href="css/base.css" />
 <script type="text/javascript" src="js/jquery.min.js" ></script>
 <script type="text/javascript" src="js/common.js" ></script>
@@ -10,16 +10,11 @@
 <body>
 <div class="container urgent">
 	<div class="header clearfix">
-		<ul class="list">
-			<li class="current"><a href="list.html"><span>紧急业务</span></a></li>
-			<li><a href="index.html"><span>服务项目</span></a></li>
-			<li><a href="video.html"><span>礼仪视频</span></a></li>
-			<li><button class="close">关闭菜单按钮</button></li>
-		</ul>
+		<?php include 'side-right.php' ?>
 		<div class="title"><span>紧急业务</span></div>
 		<div class="menu"><span>菜单</span></div>
 		<div class="btn"><img src="images/next2.png" class="js-next" /></div>
-		<div class="btn"><img src="images/prev2.png" class="js-prev" /></div>		
+		<div class="btn"><img src="images/prev2.png" class="js-prev" /></div>
 	</div>
 	<div class="txt">
 		<div class="box current">
