@@ -14,7 +14,7 @@
     <div class="right">
         <?php include 'side-right.php' ?>
         <div class="header">
-            <a href="###" class="item video-icon"><span>视频礼仪</span></a>
+            <a class="item clean-icon icon"><span>保洁</span></a>
             <a href="index.php" class="back"><span>返回</span></a>
         </div>
         <div class="content">

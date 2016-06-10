@@ -14,13 +14,17 @@
     <div class="right">
         <?php include 'side-right.php' ?>
         <div class="header">
+            <a class="item baby-icon icon"><span>育儿嫂</span></a>
             <a href="index.php" class="back"><span>返回</span></a>
         </div>
         <div class="content">
-            <img src="images/imgs.png"/><img src="images/imgs.png"/><img src="images/imgs.png"/>
+            <div class="img-wrapper">
+                <img src="images/page-baby.png" />
+            </div>
         </div>
     </div>
 </div>
 <?php include 'vscroll.php'; ?>
 </body>
 </html>
+

@@ -86,9 +86,9 @@ img { max-width: 100%; height: auto; }
 .list li .close:hover{background: #2274C6;border:3px solid #2274C6;}
 .content{margin-top: 90px;padding-right:30px}
 .content img{width: 100%;}
-.content .img-wrapper {width:840px;margin:auto;padding-top:30px}
+.content .img-wrapper {width:840px;margin:auto;padding-top:30px;padding-bottom:50px}
 .scroll_bar{position: fixed;right: 15px;top: 110px;z-index:10}
-.scroll_bar img{width: 50px;margin-bottom:15px;cursor: pointer;}
+.scroll_bar img{width: 35px;margin-bottom:15px;cursor: pointer;}
 .qimo8{ overflow:hidden; width:100%;background: url(../images/5-20.png) repeat-y;background-size:100%;height:70px;  font-size:24px;}
 .qimo8 .qimo {width:8000%; height:70px;}
 .qimo8 .qimo div{ float:left;}
@@ -122,3 +122,11 @@ table.jobs td.title {font-size:28px}
 table.jobs td.salary {width:200px;font-size:24px}
 table.jobs tr:nth-of-type(even){background:rgba(0,0,0,0.5);}
 table.jobs .rest {font-size:18px;color:#ddd}
+/** icons **/
+.right .icon.item span {background-size: 36px auto;padding-left: 55px;}
+.right .clean-icon span{background: url(../images/cleaning-icon.png) no-repeat center left;}
+.right .care-icon span{background: url(../images/care-icon.png) no-repeat center left;}
+.right .baby-icon span{background: url(../images/baby-icon.png) no-repeat center left;}
+.right .mammy-icon span{background: url(../images/mammy-icon.png) no-repeat center left;background-size:28px auto!important}
+.right .housework-icon span{background: url(../images/housework-icon.png) no-repeat center left;}
+.right .hour-icon span{background: url(../images/hour-icon.png) no-repeat center left;}

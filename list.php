@@ -47,6 +47,8 @@
 <audio src="http://tv.haojialian123.com/files/promise.mp3" autoplay="true" loop="true"></audio>
 <script type="text/javascript">
 
+    var autoReloadJobs;
+
     function shuffle(array) {
         var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -74,6 +76,7 @@
     };
 
     function loadJobs() {
+        clearTimeout(autoReloadJobs);
         if(jobList.loading) return;
         jobList.loading = true;
         $.ajax({
@@ -111,11 +114,15 @@
             }
 
             $('table.jobs').html(cols);
+
+            autoReloadJobs = setTimeout(function() {
+                loadJobs();
+            }, 60000); // auto refresh at 60s
+
         }).always(function() {
             jobList.loading = false;
         });
     }
-
 
     $(function() {
 
