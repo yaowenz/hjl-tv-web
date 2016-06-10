@@ -44,9 +44,7 @@
         </div>
     </div>
 </div>
-<!--
 <audio src="http://tv.haojialian123.com/files/promise.mp3" autoplay="true" loop="true"></audio>
--->
 <script type="text/javascript">
 
     function shuffle(array) {
