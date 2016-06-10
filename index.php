@@ -19,31 +19,31 @@
 		</div>
 		<div class="category">
 			<div class="top clearfix">
-				<div class="icons">
+				<div class="icons" data-href="service-cleaning.php">
 					<div></div>
-					<a href="content.html"><img src="images/15-28.png" /></a>
+					<img src="images/15-28.png" />
 				</div>
-				<div class="icons">
+				<div class="icons" data-href="service-baby.php">
 					<div></div>
-					<a href="content.html"><img src="images/15-26.png" /></a>
+					<img src="images/15-26.png" />
 				</div>
-				<div class="icons">
+				<div class="icons" data-href="service-care.php">
 					<div></div>
-					<a href="content.html"><img src="images/15-27.png" /></a>
+					<img src="images/15-27.png" />
 				</div>
 			</div>
 			<div class="top bottom clearfix">
-				<div class="icons">
+				<div class="icons" data-href="service-housework.php">
 					<div></div>
-					<a href="content.html"><img src="images/15-31.png" /></a>
+					<img src="images/15-31.png" />
 				</div>
-				<div class="icons">
+				<div class="icons" data-href="service-mammy.php">
 					<div></div>
-					<a href="content.html"><img src="images/15-30.png" /></a>
+					<img src="images/15-30.png" />
 				</div>
-				<div class="icons">
+				<div class="icons" data-href="service-hour.php">
 					<div></div>
-					<a href="content.html"><img src="images/15-29.png" /></a>
+					<img src="images/15-29.png" />
 				</div>
 			</div>
 		</div>
@@ -53,5 +53,12 @@
 		<img src="images/down.png" class="down"/>
 	</div>
 </div>
+<script>
+	$(function() {
+		$('.category .icons').click(function() {
+			location.href = $(this).data('href');
+		})
+	});
+</script>
 </body>
 </html>

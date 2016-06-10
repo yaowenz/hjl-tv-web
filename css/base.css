@@ -10,7 +10,7 @@ a { text-decoration: none; color: #fff; }
 img { max-width: 100%; height: auto; }
 .clearfix { zoom: 1; }
 .clearfix:after { display: block; overflow: hidden; clear: both; height: 0; visibility: hidden; content: '.'; }
-.left{width: 25%;float: left;background: rgba(0,0,0,.3);position: relative;height: 1080px;text-align: center;position: fixed;top: 0;left: 0;}
+.left{width: 25%;float: left;background: rgba(0,0,0,.3);position: relative;height: 100%px;text-align: center;position: fixed;top: 0;left: 0;}
 .left .logo{width: 30%;margin-top: 20%;}
 .left h1{font-weight: normal;margin-top: 5%; font-size: 50px;line-height: 1.6;}
 .left .branch {font-size:30px}
@@ -44,32 +44,33 @@ img { max-width: 100%; height: auto; }
 .videos2{margin-top:35px;}
 .videos>div:first-child{margin-left: 5%;}
 .videos .vs{width: 40%;;text-align: center;float: left;margin-left: 4%;cursor:pointer;}
-.videos .vs p{margin-top: 20px;font-size:30px;}
+.videos .vs p{margin-top: 10px;font-size:30px;}
 .videos .vs>div{border: 5px solid transparent;}
-.videos .vs .border{border:3px solid #e0a242 ;width: 90%;margin: 5%;border-radius: 10px;box-sizing: border-box;}
+.videos .vs .border{border:3px solid #e0a242 ;width: 95%;margin: 2.5%;border-radius: 10px;box-sizing: border-box;}
 .videos .vs:hover>div{border: 5px solid #fff;border-radius: 10px;box-sizing: border-box;}
 .videos video{width: 100%;border-radius: 10px;}
 .btns{text-align: center;margin-top:180px;}
 .btns a{padding: 15px 55px;font-size: 24px;border-radius: 10px;margin: 0 3%;}
 .btns>a:last-child{background: rgba(0,0,0,.5);}
-.urgent .header{height: 90px;border-bottom: 3px solid #E0A242;width: 100%;background: url(../images/top.jpg) no-repeat;position: fixed;top: 0;left: 0;}
+.container.urgent {height:100%}
+.urgent .header{height: 90px;border-bottom: 3px solid #E0A242;width: 100%;background: url(../images/top.jpg) no-repeat}
 .urgent .header .title{float: left;margin-left: 40px;-line-height: 90px;padding-top: 27px;}
 .urgent .header .menu{float: right;width: 260px;background: url(../images/5-20.png) no-repeat;background-size: 100%;text-align: center;cursor: pointer;height: 63px;padding-top: 27px;max-width: 316px;}
 .urgent .header .menu span{background: url(../images/menu.png)no-repeat center left;background-size: 36px auto;padding-left: 55px;font-size: 36px;}
 .urgent .title span{background: url(../images/list.png) no-repeat center left;font-size: 36px;background-size: auto 36px ;padding-left: 55px;}
 .urgent .header .btn{float: right;}
-.urgent .btn img{width: 70px;height: 40px;margin-right: 80px;margin-top: 25px;cursor: pointer;}
-.txt{margin-top: 95px;}
+.urgent .btn img{height: 50px;margin-right:20px;margin-top:20px;cursor: pointer;}
+.txt {height:calc(100% - 160px);width:100%;overflow:hidden}
 .txt .box{display: none;}
 .txt .current{display: block;}
-.txt .items{width: 100%;font-size:28px;height:183px;background:rgba(0,0,0,0.3);display: block;box-sizing: border-box;}
+.txt .items{width: 100%;font-size:24px;height:183px;background:rgba(0,0,0,0.3);display: block;box-sizing: border-box;}
 .txt .items:nth-of-type(even){background:rgba(0,0,0,0.5);}
 .txt .items .i1,.txt .items .i3{width: 20%;float: left;}
 .txt .items .i2{width: 60%;float: left;}
 .txt .items .i1{color:#bebebe;}
 .txt .items .i1 p{line-height:40px;margin-top:20px;margin-left:40px;}
 .txt .items .i1 p:first-child{margin-top: 45px;}
-.txt .items .i2 p{line-height:55px;margin-top:40px;}
+.txt .items .i2 p{line-height:55px}
 .txt .items .i3 p{line-height:40px;margin-top:20px;margin-left:60px;}
 .txt .items .i3 p:first-child{margin-top: 45px;}
 .list{position: absolute;width: 260px;background: #1c2a3d;top: 90px;right: -25%;text-align: center;z-index: 9;height: 990px;position: fixed;right: -260px;top: 90px;}
@@ -85,21 +86,14 @@ img { max-width: 100%; height: auto; }
 .list li .close:hover{background: #2274C6;border:3px solid #2274C6;}
 .content{margin-top: 90px;}
 .content img{width: 100%;}
-
-
 .scroll_bar{position: fixed;right: 100px;top: 100px;display: none;}
 .scroll_bar img{width: 50px;margin: 30px;cursor: pointer;}
-
-
-
-
-
 .qimo8{ overflow:hidden; width:100%;background: url(../images/5-20.png) repeat-y;background-size:100%;height:70px;  font-size:24px;}
 .qimo8 .qimo {width:8000%; height:70px;}
 .qimo8 .qimo div{ float:left;}
 .qimo8 .qimo ul{float:left; height:70px; overflow:hidden; zoom:1; }
 .qimo8 .qimo ul li{float:left; line-height:70px; list-style:none;}
-.qimo8 li a{margin-right:10px;color:#efe133;}
+.qimo8 li {margin-right:10px;color:#efe133;}
 :-webkit-full-screen {}
 :-moz-full-screen {}
 :-ms-fullscreen {}
@@ -108,40 +102,7 @@ img { max-width: 100%; height: auto; }
 :fullscreen {}
 :-webkit-full-screen video {width: 100%;height: 100%;}
 :-moz-full-screen video{width: 100%;height: 100%;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-body div.videobox{-width: 400px;-height: 320px;-margin: 100px auto;
--background-color:#000;}
+body div.videobox{-width: 400px;-height: 320px;-margin: 100px auto;-background-color:#000;}
 body div.videobox video.video{width: 100%;height: 100%;}
 :-webkit-full-screen {}
 :-moz-full-screen {}
@@ -151,30 +112,11 @@ body div.videobox video.video{width: 100%;height: 100%;}
 :fullscreen {}
 :-webkit-full-screen video {width: 100%;height: 100%;}
 :-moz-full-screen video{width: 100%;height: 100%;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+table.jobs {height:100%;width:100%;font-size:20px}
+table.jobs tr {height:20%}
+table.jobs tr td {padding:10px;}
+table.jobs tr td {line-height:1.6}
+table.jobs td.no {width:200px;color:#bebebe;font-size:18px}
+table.jobs td.title {font-size:24px}
+table.jobs td.salary {width:200px;text-align:center;font-size:22px}
+table.jobs tr:nth-of-type(even){background:rgba(0,0,0,0.5);}

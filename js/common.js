@@ -10,43 +10,45 @@ $(function(){
 		$(this).parent().siblings().children().removeClass("current");
 		$(this).addClass("current");
 	})
-	var step = 0;
-	var items = $(".txt .box").length;	
-	$(".js-next").click(function(){
-		step++;
-		if(step>=items){
-			alert("这是最后一页");
-			step=items-1;
-			console.log(step);
-			return false;
-		}
-		$(".box").removeClass("current");
-		$(".box").eq(step).addClass("current");
-		
-		console.log(step);
-	})
-	$(".js-prev").click(function(){
-		step--;
-		if(step< 0){
-			step=0;
-			console.log(step);
-			alert("已是第一页");
-			return false;
-		}
-		$(".box").removeClass("current");
-		$(".box").eq(step).addClass("current");
-		
-		console.log(step);
-	})
+
+	//var step = 0;
+	//var items = $(".txt .box").length;
+	//$(".js-next").click(function(){
+	//	step++;
+	//	if(step>=items){
+	//		alert("这是最后一页");
+	//		step=items-1;
+	//		console.log(step);
+	//		return false;
+	//	}
+	//	$(".box").removeClass("current");
+	//	$(".box").eq(step).addClass("current");
+	//
+	//	console.log(step);
+	//})
+	//$(".js-prev").click(function(){
+	//	step--;
+	//	if(step< 0){
+	//		step=0;
+	//		console.log(step);
+	//		alert("已是第一页");
+	//		return false;
+	//	}
+	//	$(".box").removeClass("current");
+	//	$(".box").eq(step).addClass("current");
+	//
+	//	console.log(step);
+	//})
+
 	$(".js-next").hover(function(){
 		$(".js-next").attr("src","images/next2.png");
 	},function(){
 		$(".js-next").attr("src","images/next.png");
 	})
 	$(".js-prev").hover(function(){
-		$(".js-prev").attr("src","images/prev.png");
-	},function(){
 		$(".js-prev").attr("src","images/prev2.png");
+	},function(){
+		$(".js-prev").attr("src","images/prev.png");
 	})
 	
 	
