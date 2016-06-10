@@ -62,29 +62,32 @@ $(function(){
 	},function(){
 		$(".scroll_bar .up").attr("src","images/up.png");
 	})
-	
-	
+
+	$(".scroll_bar .down").click(function(){
+		window.scrollBy(0, 150);
+	});
+
+	$(".scroll_bar .up").click(function(){
+		window.scrollBy(0, -150);
+	});
+
+
+	// 关闭右侧菜单
 	$(".list .close").click(function(){
 		$(".list").animate({"right":"-260px"},300)
 	})
 	
-/*循环播放
- * var timer = setInterval(start,3000)
-function start(){
-	if(step>=items){
-		//alert("这是最后一页");
-		step=items-1;
-		console.log(step);
-		return false;
-	}
-	$(".box").removeClass("current");
-	$(".box").eq(step).addClass("current");
-	step++;
-}*/
-
-
-
-
-
-
+	/*循环播放
+	 * var timer = setInterval(start,3000)
+	function start(){
+		if(step>=items){
+			//alert("这是最后一页");
+			step=items-1;
+			console.log(step);
+			return false;
+		}
+		$(".box").removeClass("current");
+		$(".box").eq(step).addClass("current");
+		step++;
+	}*/
 })

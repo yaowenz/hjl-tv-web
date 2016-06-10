@@ -14,18 +14,13 @@
     <div class="right">
         <?php include 'side-right.php' ?>
         <div class="header">
-            <a href="../index.php" class="back"><span>返回</span></a>
+            <a href="index.php" class="back"><span>返回</span></a>
         </div>
         <div class="content">
             <img src="images/imgs.png"/><img src="images/imgs.png"/><img src="images/imgs.png"/>
         </div>
     </div>
-    <!--
-    <div class="scroll_bar">
-        <img src="images/up.png" class="up"/><br/>
-        <img src="images/down.png" class="down"/>
-    </div>
-    -->
 </div>
+<?php include 'vscroll.php'; ?>
 </body>
 </html>

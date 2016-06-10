@@ -15,17 +15,15 @@
         <?php include 'side-right.php' ?>
         <div class="header">
             <a href="###" class="item video-icon"><span>视频礼仪</span></a>
-            <a href="###" class="menu"><span>菜单</span></a>
-            <a href="###" class="back"><span>返回</span></a>
+            <a href="index.php" class="back"><span>返回</span></a>
         </div>
         <div class="content">
-            <img src="images/imgs.png"/><img src="images/imgs.png"/><img src="images/imgs.png"/>
+            <div class="img-wrapper">
+                <img src="images/page-cleaning.png" />
+            </div>
         </div>
     </div>
-    <div class="scroll_bar">
-        <img src="images/up.png" class="up"/><br/>
-        <img src="images/down.png" class="down"/>
-    </div>
 </div>
+<?php include 'vscroll.php'; ?>
 </body>
 </html>
