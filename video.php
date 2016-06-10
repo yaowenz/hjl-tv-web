@@ -22,7 +22,7 @@
                 <div class="vs">
                     <div>
                         <div class="border">
-                            <video src="saiban_ch.mp4" poster="images/v.jpg" id="video0"></video>
+                            <video src="http://tv.haojialian123.com/files/video-manner.mp4" poster="images/v.jpg" id="video0"></video>
                         </div>
                     </div>
                     <p>礼仪礼节篇</p>
@@ -30,7 +30,7 @@
                 <div class="vs">
                     <div>
                         <div class="border">
-                            <video src="saiban_ch.mp4" poster="images/v.jpg" id="video1"></video>
+                            <video src="http://tv.haojialian123.com/files/video-training.mp4" poster="images/v.jpg" id="video1"></video>
                         </div>
                     </div>
                     <p>岗前培训篇</p>

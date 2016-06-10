@@ -22,7 +22,6 @@
             <div class="items">
                 <div class="i1">
                     <p>316050021</p>
-
                     <p>长宁区 - 啦啦花园</p>
                 </div>
                 <div class="i2">
