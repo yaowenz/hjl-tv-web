@@ -134,8 +134,8 @@
         });
 
         $(".js-prev").click(function() {
-            if(jobList.nextPage >= 2) {
-                jobList.nextPage = jobList.nextPage - 1;
+            if(jobList.currentPage > 1) {
+                jobList.nextPage = jobList.currentPage - 1;
                 loadJobs();
             }
         });
