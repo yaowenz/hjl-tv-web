@@ -121,3 +121,4 @@ table.jobs td.no {width:200px;color:#bebebe;font-size:18px}
 table.jobs td.title {font-size:28px}
 table.jobs td.salary {width:200px;font-size:24px}
 table.jobs tr:nth-of-type(even){background:rgba(0,0,0,0.5);}
+table.jobs .rest {font-size:18px;color:#ddd}

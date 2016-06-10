@@ -77,14 +77,21 @@
         if(jobList.loading) return;
         jobList.loading = true;
         $.ajax({
-            url: 'jobs.json',
+            url: 'remote.php',
             cache: false,
-            data: {page: jobList.nextPage}
+            data: {page: jobList.nextPage, data: 'jobs'}
         }).done(function(response) {
+            // 数据读完，从头开始读
+            if(response.data.length == 0) {
+                jobList.loading = false;
+                jobList.nextPage = 1;
+                loadJobs();
+            }
+
             jobList.nextPage = response.nextPage;
             jobList.currentPage = response.currentPage;
             var cols = '';
-            var data = shuffle(response.data);
+            var data = response.data;
             for(var i in data) {
                 var row = data[i];
                 cols += '<tr>' +
@@ -93,9 +100,16 @@
                                 '<p class="loc">' + row['loc'] + '</p>' +
                             '</td>' +
                             '<td class="title">' + row['title'] + '</td>' +
-                            '<td class="salary">' + row['salary'] + '</td>' +
+                            '<td class="salary">' + row['salary'] + '<p class="rest">' + row['rest'] + '</p></td>' +
                         '</tr>'
             }
+
+            if(data.length < 5) {
+                for(var i = 1; i <= 5 - data.length; i ++) {
+                    cols += "<tr><td></td><td></td><td></td></tr>";
+                }
+            }
+
             $('table.jobs').html(cols);
         }).always(function() {
             jobList.loading = false;
