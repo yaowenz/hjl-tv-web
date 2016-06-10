@@ -22,56 +22,6 @@
     </div>
     <div class="txt">
         <table border="0" class="jobs">
-            <tr>
-                <td class="no">
-                    <p class="outer-id">W2019102K1292</p>
-                    <p class="loc">长宁区 - 啦啦花园</p>
-                </td>
-                <td class="title">古北店/长宁区3个月又胞胎女宝(带)烧饭卫生 4口人 130平4口人 1</td>
-                <td class="salary">
-                    5000元/月
-                </td>
-            </tr>
-            <tr class="odd">
-                <td class="no">
-                    <p class="outer-id">W2019102K1292</p>
-                    <p class="loc">长宁区 - 啦啦花园</p>
-                </td>
-                <td class="title">古北店/长宁区3个月又胞胎女宝(带)烧饭卫生 4口人 130平4口人 1</td>
-                <td class="salary">
-                    5000元/月
-                </td>
-            </tr>
-            <tr>
-                <td class="no">
-                    <p class="outer-id">W2019102K1292</p>
-                    <p class="loc">长宁区 - 啦啦花园</p>
-                </td>
-                <td class="title">古北店/长宁区3个月又胞胎女宝(带)烧饭卫生 4口人 130平4口人 130平4口人 130平4口人 130平4口人</td>
-                <td class="salary">
-                    5000元/月
-                </td>
-            </tr>
-            <tr class="odd">
-                <td class="no">
-                    <p class="outer-id">W2019102K1292</p>
-                    <p class="loc">长宁区 - 啦啦花园</p>
-                </td>
-                <td class="title">古北店/长宁区3个月又胞胎女宝(带)烧饭卫生 4口人 130平4口人 1</td>
-                <td class="salary">
-                    5000元/月
-                </td>
-            </tr>
-            <tr>
-                <td class="no">
-                    <p class="outer-id"></p>
-                    <p class="loc">长宁区 - 啦啦花园</p>
-                </td>
-                <td class="title">古北店/长宁区3个月又胞胎女宝(带)烧饭卫生 4口人 130平4口人 1</td>
-                <td class="salary">
-                    5000元/月
-                </td>
-            </tr>
         </table>
     </div>
     <div id="demo" class="qimo8">
@@ -93,35 +43,116 @@
             <div id="demo2"></div>
         </div>
     </div>
-    <div class="scroll_bar">
-        <img src="images/up.png" class="up"/><br/>
-        <img src="images/down.png" class="down"/>
-    </div>
 </div>
 <!--
 <audio src="http://tv.haojialian123.com/files/promise.mp3" autoplay="true" loop="true"></audio>
 -->
 <script type="text/javascript">
-    return;
-    var demo = document.getElementById("demo");
-    var demo1 = document.getElementById("demo1");
-    var demo2 = document.getElementById("demo2");
-    demo2.innerHTML = document.getElementById("demo1").innerHTML;
-    function Marquee() {
-        if (demo.scrollLeft - demo2.offsetWidth >= 0) {
-            demo.scrollLeft -= demo1.offsetWidth;
+
+    function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
         }
-        else {
-            demo.scrollLeft++;
+
+        return array;
+    }
+
+    // load data
+    var jobList = {
+        currentPage: 1,
+        nextPage: 1,
+        loading: false,
+    };
+
+    function loadJobs() {
+        if(jobList.loading) return;
+        jobList.loading = true;
+        $.ajax({
+            url: 'jobs.json',
+            cache: false,
+            data: {page: jobList.nextPage}
+        }).done(function(response) {
+            jobList.nextPage = response.nextPage;
+            jobList.currentPage = response.currentPage;
+            var cols = '';
+            var data = shuffle(response.data);
+            for(var i in data) {
+                var row = data[i];
+                cols += '<tr>' +
+                            '<td class="no">' +
+                                '<p class="outer-id">' + row['outer-id'] + '</p>' +
+                                '<p class="loc">' + row['loc'] + '</p>' +
+                            '</td>' +
+                            '<td class="title">' + row['title'] + '</td>' +
+                            '<td class="salary">' + row['salary'] + '</td>' +
+                        '</tr>'
+            }
+            $('table.jobs').html(cols);
+        }).always(function() {
+            jobList.loading = false;
+        });
+    }
+
+
+    $(function() {
+
+        loadJobs();
+
+
+        $(".js-next").click(function() {
+            loadJobs();
+        });
+
+        $(".js-prev").click(function() {
+            if(jobList.nextPage >= 2) {
+                jobList.nextPage = jobList.nextPage - 1;
+                loadJobs();
+            }
+        });
+
+        $(".js-next").hover(function(){
+            $(".js-next").attr("src","images/next2.png");
+        },function(){
+            $(".js-next").attr("src","images/next.png");
+        })
+        $(".js-prev").hover(function(){
+            $(".js-prev").attr("src","images/prev2.png");
+        },function(){
+            $(".js-prev").attr("src","images/prev.png");
+        })
+
+        var demo = document.getElementById("demo");
+        var demo1 = document.getElementById("demo1");
+        var demo2 = document.getElementById("demo2");
+        demo2.innerHTML = document.getElementById("demo1").innerHTML;
+        function Marquee() {
+            if (demo.scrollLeft - demo2.offsetWidth >= 0) {
+                demo.scrollLeft -= demo1.offsetWidth;
+            }
+            else {
+                demo.scrollLeft++;
+            }
         }
-    }
-    var myvar = setInterval(Marquee, 10);
-    demo.onmouseout = function () {
-        myvar = setInterval(Marquee, 10);
-    }
-    demo.onmouseover = function () {
-        clearInterval(myvar);
-    }
+        var myvar = setInterval(Marquee, 10);
+        demo.onmouseout = function () {
+            myvar = setInterval(Marquee, 10);
+        }
+        demo.onmouseover = function () {
+            clearInterval(myvar);
+        }
+
+    })
 </script>
 </body>
 </html>

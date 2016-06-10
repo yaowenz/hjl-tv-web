@@ -10,7 +10,7 @@ a { text-decoration: none; color: #fff; }
 img { max-width: 100%; height: auto; }
 .clearfix { zoom: 1; }
 .clearfix:after { display: block; overflow: hidden; clear: both; height: 0; visibility: hidden; content: '.'; }
-.left{width: 25%;float: left;background: rgba(0,0,0,.3);position: relative;height: 100%px;text-align: center;position: fixed;top: 0;left: 0;}
+.left{width: 25%;float: left;background: rgba(0,0,0,.3);position: relative;height: 100%;text-align: center;position: fixed;top: 0;left: 0;}
 .left .logo{width: 30%;margin-top: 20%;}
 .left h1{font-weight: normal;margin-top: 5%; font-size: 50px;line-height: 1.6;}
 .left .branch {font-size:30px}
@@ -119,5 +119,5 @@ table.jobs tr td {padding:10px;}
 table.jobs tr td {line-height:1.6}
 table.jobs td.no {width:200px;color:#bebebe;font-size:18px}
 table.jobs td.title {font-size:24px}
-table.jobs td.salary {width:200px;text-align:center;font-size:22px}
+table.jobs td.salary {width:200px;font-size:22px}
 table.jobs tr:nth-of-type(even){background:rgba(0,0,0,0.5);}
