@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>天地家政 - 智能TV</title>
-<link rel="stylesheet" href="css/base.css" />
-<script type="text/javascript" src="js/jquery.min.js" ></script>
-<script type="text/javascript" src="js/common.js" ></script>
+	<title>天地家政 - 智能TV</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/base.css" />
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script type="text/javascript" src="js/common.js" ></script>
 </head>
 <body>
 <div class="container">

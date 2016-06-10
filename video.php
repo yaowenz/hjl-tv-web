@@ -132,14 +132,14 @@
         launchFullscreen(document.getElementById("video" + i));
     });
 
-    window.setInterval(function () {
-        //檢查瀏覽器是否處於全屏
-        if (invokeFieldOrMethod(document, 'FullScreen') || invokeFieldOrMethod(document, 'IsFullScreen') || document.IsFullScreen) {
-            return;
-        }
-
-        exitFullscreen();
-    }, 1000);
+//    window.setInterval(function () {
+//        //檢查瀏覽器是否處於全屏
+//        if (invokeFieldOrMethod(document, 'FullScreen') || invokeFieldOrMethod(document, 'IsFullScreen') || document.IsFullScreen) {
+//            return;
+//        }
+//
+//        exitFullscreen();
+//    }, 1000);
 
 </script>
 </body>
