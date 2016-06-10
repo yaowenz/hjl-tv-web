@@ -17,12 +17,12 @@ img { max-width: 100%; height: auto; }
 .left p{line-height: 40px;font-size:24px;}
 .left .loc {margin-top:30px;}
 .left .loc, .left .tel {color:#999;font-size:20px}
-.left .code{width: 46%;position: absolute;bottom: 5%;left: 27%;}
+.left .code{width: 46%;margin-top:100px;bottom: 5%;left: 27%;}
 .right{width: 75%;float: left;position: relative;margin-left: 25%;}
 .right .header{height: 90px;background: url(../images/top2.jpg) no-repeat;width: 100%;position: fixed;top: 0;right: 0;width: 75%;}
 .right .header span{font-size: 36px;line-height: 90px;}
 .right .header a{display: block;color: #fff;}
-.right .category {padding:100px 0px 0px 0px}
+.right .category {padding:50px 0px 0px 0px}
 .right .item{float: left;margin-left: 40px;}
 .right .item span{background: url(../images/5-28.png)no-repeat center left;background-size: 36px auto;padding-left: 55px;}
 .right .video span{background: url(../images/video.png)no-repeat center left;background-size: 36px auto;padding-left: 55px;}

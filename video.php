@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>培训视频</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <link rel="stylesheet" href="css/base.css"/>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
@@ -32,7 +33,7 @@
                             <video src="saiban_ch.mp4" poster="images/v.jpg" id="video1"></video>
                         </div>
                     </div>
-                    <p>礼仪礼节篇</p>
+                    <p>岗前培训篇</p>
                 </div>
             </div>
         </div>
