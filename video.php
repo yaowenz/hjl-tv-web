@@ -100,28 +100,27 @@
     }
     //退出全屏
     function exitFullscreen() {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        } else if (document.msExitFullscreen) {
-            document.msExitFullscreen();
-        } else if (document.mozCancelFullScreen) {
-            document.mozCancelFullScreen();
-        } else if (document.oRequestFullscreen) {
-            document.oCancelFullScreen();
-        } else if (document.webkitExitFullscreen) {
-            document.webkitExitFullscreen();
-        } else {
-            var docHtml = document.documentElement;
-            var docBody = document.body;
-            var videobox = document.getElementById('videobox');
-            docHtml.style.cssText = "";
-            docBody.style.cssText = "";
-            videobox.style.cssText = "";
-            document.IsFullScreen = false;
-        }
+//        if (document.exitFullscreen) {
+//            document.exitFullscreen();
+//        } else if (document.msExitFullscreen) {
+//            document.msExitFullscreen();
+//        } else if (document.mozCancelFullScreen) {
+//            document.mozCancelFullScreen();
+//        } else if (document.oRequestFullscreen) {
+//            document.oCancelFullScreen();
+//        } else if (document.webkitExitFullscreen) {
+//            document.webkitExitFullscreen();
+//        } else {
+//            var docHtml = document.documentElement;
+//            var docBody = document.body;
+//            var videobox = document.getElementById('videobox');
+//            docHtml.style.cssText = "";
+//            docBody.style.cssText = "";
+//            videobox.style.cssText = "";
+//            document.IsFullScreen = false;
+//        }
 
         $('video').each(function() {
-            console.log('pause');
             this.pause();
         })
     }
@@ -132,15 +131,14 @@
         launchFullscreen(document.getElementById("video" + i));
     });
 
-//    window.setInterval(function () {
-//        //檢查瀏覽器是否處於全屏
-//        if (invokeFieldOrMethod(document, 'FullScreen') || invokeFieldOrMethod(document, 'IsFullScreen') || document.IsFullScreen) {
-//            return;
-//        }
-//
-//        exitFullscreen();
-//    }, 1000);
+    document.addEventListener("fullscreenchange", function () {
+        if(!document.fullscreen) exitFullscreen();
+        fullscreenState.innerHTML = (document.fullscreen)? "" : "not ";
+    }, false);
 
+    document.addEventListener("webkitfullscreenchange", function () {
+        if(!document.webkitIsFullScreen) exitFullscreen();
+    }, false);
 </script>
 </body>
 </html>

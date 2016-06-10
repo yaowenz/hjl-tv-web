@@ -53,5 +53,8 @@
 		<img src="images/down.png" class="down"/>
 	</div>
 </div>
+<script>
+	alert(screen.width+"x"+screen.height);
+</script>
 </body>
 </html>
