@@ -155,6 +155,7 @@
         var demo1 = document.getElementById("demo1");
         var demo2 = document.getElementById("demo2");
         demo2.innerHTML = document.getElementById("demo1").innerHTML;
+
         function Marquee() {
             if (demo.scrollLeft - demo2.offsetWidth >= 0) {
                 demo.scrollLeft -= demo1.offsetWidth;
@@ -163,13 +164,13 @@
                 demo.scrollLeft++;
             }
         }
-        var myvar = setInterval(Marquee, 20);
-        demo.onmouseout = function () {
-            myvar = setInterval(Marquee, 20);
-        }
-        demo.onmouseover = function () {
-            clearInterval(myvar);
-        }
+        var myvar = setInterval(Marquee, 10);
+        //demo.onmouseout = function () {
+        //    myvar = setInterval(Marquee, 20);
+        //}
+        //demo.onmouseover = function () {
+        //    clearInterval(myvar);
+        //}
 
 		// autoplay subtitle audio
 		document.getElementById('subtitle').play();
