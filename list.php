@@ -44,7 +44,7 @@
         </div>
     </div>
 </div>
-<audio src="http://tv.haojialian123.com/files/promise.mp3" autoplay="true" loop="true"></audio>
+<audio id="subtitle" src="http://tv.haojialian123.com/files/promise.mp3" autoplay="true" loop="true"></audio>
 <script type="text/javascript">
 
     var autoReloadJobs;
@@ -171,7 +171,9 @@
             clearInterval(myvar);
         }
 
-    })
+		// autoplay subtitle audio
+		document.getElementById('subtitle').play();
+    });
 </script>
 </body>
 </html>
