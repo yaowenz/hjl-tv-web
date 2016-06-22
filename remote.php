@@ -26,11 +26,21 @@ class RemoteService {
         if($_GET['data'] == 'jobs') {
             return self::getJobs();
         }
+        if($_GET['data'] == 'shop') {
+            return self::getShopInfo();
+        }
     }
 
     public static function getJobs() {
-        $params = http_build_query(['identifier' => 'tiandijz_sg', 'page' => $_GET['page']]);
+        $params = http_build_query(['identifier' => $_GET['identifier'], 'page' => $_GET['page']]);
         $url = 'http://api.haojialian.net/shop/tv/jobs?' . $params; // TODO config
+        $data = self::httpGet($url, $params);
+        return $data;
+    }
+    
+    public static function getShopInfo() {
+        $params = http_build_query(['identifier' => $_GET['identifier']]);
+        $url = 'http://api.haojialian/shop/tv/info?' . $params; // TODO config
         $data = self::httpGet($url, $params);
         return $data;
     }
