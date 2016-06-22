@@ -40,7 +40,7 @@ class RemoteService {
     
     public static function getShopInfo() {
         $params = http_build_query(['identifier' => $_GET['identifier']]);
-        $url = 'http://api.haojialian/shop/tv/info?' . $params; // TODO config
+        $url = 'http://api.haojialian.net/shop/tv/info?' . $params; // TODO config
         $data = self::httpGet($url, $params);
         return $data;
     }
